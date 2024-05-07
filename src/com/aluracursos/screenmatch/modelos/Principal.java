@@ -3,20 +3,22 @@ package com.aluracursos.screenmatch.modelos;
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula=new Pelicula();
-        miPelicula.nombre="Encanto";
-        miPelicula.fechaDeLanzamiento=2021;
-        miPelicula.duracionEnMinutos=120;
+        miPelicula.setNombre("Encanto");
+        miPelicula.setFechaDeLanzamiento(2021);
+        miPelicula.setDuracionEnMinutos(120);
+        miPelicula.setIncluidoEnElPlan(true);
 
 
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(7.8);
         miPelicula.evalua(10);
-        System.out.println(miPelicula.getTotalDeLasEvaluaciones());
+        miPelicula.evalua(10);
+        System.out.println("Media de las evaluaciones de la pelicula: "+ miPelicula.calculaMedia());
 
 
 
 
-//        Pelicula otraPelicula=new Pelicula();
+//        com.aluracursos.screenmatch.modelos.Principal.Pelicula otraPelicula=new com.aluracursos.screenmatch.modelos.Principal.Pelicula();
 //        otraPelicula.nombre="Matrix";
 //        otraPelicula.fechaDeLanzamiento=1998;
 //        otraPelicula.duracionEnMinutos=180;
@@ -24,4 +26,6 @@ public class Principal {
 //      otraPelicula.muestraFichaTecnica();
 
     }
+
+
 }
